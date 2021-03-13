@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use strict;
-use lib '/home/andy/release/src/scripts';
+use lib '/home/andy/admin/scripts';
 use Sys::Hostname;
 use Getopt::Long;
 use Utils::lib::Utils;
@@ -116,7 +116,7 @@ print FH "\n\nBackup completed on $curdate.\n";
 close(FH);
 
 # Send notification
-system 'mail -s "Rsync backup sv5 /home completed" andy@r2semi.com  < /tmp/email1.txt';
+system 'mail -s "Rsync backup sv5 /home completed" admin_notify@r2semi.com  < /tmp/email1.txt';
 
 exit;
 
@@ -154,7 +154,7 @@ close(FH);
 close($LOG);
 
 # Send notification
-system 'mail -s "Rsync backup completed" andy < /tmp/email.txt';
+system 'mail -s "Rsync backup completed" admin_notify@r2semi.com < /tmp/email.txt';
 
 #######################################################################
 sub Usage()
