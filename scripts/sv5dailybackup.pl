@@ -52,7 +52,7 @@ $saturday = 0;
 $curdate = `date`;
 chomp($curdate);
 
-open(FH ,">/tmp/email1.txt") || die "Can't open file";
+open(FH ,">/tmp/sv5home.txt") || die "Can't open file";
 print FH "\nBackup started on $curdate.\n";
 
 # Backup Unix home directories on sv5
@@ -116,11 +116,11 @@ print FH "\n\nBackup completed on $curdate.\n";
 close(FH);
 
 # Send notification
-system 'mail -s "Rsync backup sv5 /home completed" admin_notify@r2semi.com  < /tmp/email1.txt';
+#system 'mail -s "Rsync backup sv5 /home completed" admin_notify@r2semi.com  < /tmp/sv5home.txt';
 
 exit;
 
-
+#END of program
 
 # Backup of Windows public directory 
   $time = gettime();
