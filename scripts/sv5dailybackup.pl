@@ -116,7 +116,7 @@ print FH "\n\nBackup completed on $curdate.\n";
 close(FH);
 
 # Send notification
-#system 'mail -s "Rsync backup sv5 /home completed" admin_notify@r2semi.com  < /tmp/sv5home.txt';
+system 'mail -s "Rsync backup sv5 /home completed" admin_notify@r2semi.com  < /tmp/sv5home.txt';
 
 exit;
 
