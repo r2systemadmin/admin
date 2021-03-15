@@ -80,7 +80,7 @@ print FH "\nBackup of mx1 project completed on $curdate.\n";
 
 
 # Send notification
-system 'mail -s "Rsync backup mx1 projects completed" andy@r2semi.com  < /tmp/email3.txt';
+system 'mail -s "Rsync backup mx1 projects completed" admin_notify@r2semi.com  < /tmp/email3.txt';
 
 exit;
 
