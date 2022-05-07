@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in {1..500}; 
+do
+  dd if=/dev/urandom of=file$i count=1 bs=100K; 
+done 
