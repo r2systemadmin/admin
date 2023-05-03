@@ -1,0 +1,13 @@
+[Unit]
+Description=Start cds license script
+DefaultDependencies=no
+
+[Service]
+Type=simple
+User=ahughes
+ExecStart=/data/home/ahughes/cadence/startlicense.sh
+TimeoutStartSec=1
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
