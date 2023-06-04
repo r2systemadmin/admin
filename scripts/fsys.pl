@@ -24,7 +24,7 @@ my (@fields, @dfout, $free);
 $pused = $fields[4]; 
 $pused =~ s/%//;
 $free = 100 - $pused;
-$summary = $summary .  "$fs partition on $hostname has $free percent free space. $comment\n"; 
+$summary = $summary .  "$fs partition on $hostname has $free percent free space. $comment \n"; 
 return($pused);
 }
 
@@ -80,9 +80,9 @@ diskusage("sv5", "/export/home4", "Tools");
 diskusage("sv5", "/export/libs", "Spare");
 diskusage("sv5", "/export/libs1", "Spare");
 $summary = $summary . "\nmx1\n"; 
-diskusage("mx1", "/export/npd", "Old Delorean moved"); 
-diskusage("mx1", "/export/mx1home", "Home directories"); 
-diskusage("mx1", "/export/projects", "Projects"); 
+diskusage("mx1", "/export/npd", "Old Delorean moved \r"); 
+diskusage("mx1", "/export/mx1home", "Home directories \r "); 
+diskusage("mx1", "/export/projects", "Projects "); 
 
 $summary = $summary . "\nmx8\n";
 diskusage("mx8", "/export/cliocache", "Clio Cache"); 
