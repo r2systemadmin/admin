@@ -68,18 +68,6 @@ print FH "\nBackup started on $curdate.\n";
   $elapsedTime = diffTime($startTime);
   print FH "Backup of mx1:/export/mx1home Complete: Elapsed time $elapsedTime\n"; 
 
-# Backup Unix home directories on sv5 /export/home2
-  $time = gettime();
-  $startTime = time();
-  print FH  "\n\nBackup of mx1:/export/npd started at $time.\n";
-  $command = "rsync -a --delete --exclude='*.trn' /export/npd store:/bk3/mx1";
-  print $command;
-  if(Utils::execSys($command,\@message)) {
-    print FH  "rsync of mx1:/export/npd returned non zero.\n";
-    print FH @message;
-  }
-  $elapsedTime = diffTime($startTime);
-  print FH "Backup of mx1:/export/npd Complete: Elapsed time $elapsedTime\n"; 
 
 $curdate = `date`;
 chomp($curdate);
