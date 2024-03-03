@@ -2,12 +2,11 @@
 
 #checkSysConf -r show supported release
 
-#CDSDIR=/home/cadence/cadence/installs/
-$CDSDIR=/home/andy/tools.lna64/bin
+CDSDIR=/home/cadence/cadence/installs/
 
 
 echo "ICADVM20.1"
-checkSysConf --noDSIPLAY ICADVM20.1
+checkSysConf --noDISPLAY ICADVM20.1
 
 echo "ICADVM20.1 "
 $CDSDIR/PEGASUS221/tools/bin/checkSysConf PEGASUS22.1 
@@ -22,7 +21,7 @@ echo "XCELIUM2203 "
 $CDSDIR/XCELIUM2203/tools/bin/checkSysConf XCELIUM2203 
 
 echo -n "ICADVM20.1 "
-$CDSDIR/ICADVM201_27/tools/bin/checkSysConf  ICADVM20.1 -q
+$CDSDIR/ICADVM201_27/tools/bin/checkSysConf  --noDISPLAY ICADVM20.1 -q
 echo -n "PEGASUS22.1 "
 $CDSDIR/PEGASUS221/tools/bin/checkSysConf  PEGASUS22.1 -q 
 echo -n "SPECTRE21.1 "
