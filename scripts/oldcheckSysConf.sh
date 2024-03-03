@@ -2,10 +2,12 @@
 
 #checkSysConf -r show supported release
 
-CDSDIR=/home/cadence/cadence/installs/
+#CDSDIR=/home/cadence/cadence/installs/
+$CDSDIR=/home/andy/tools.lna64/bin
+
 
 echo "ICADVM20.1"
-$CDSDIR/ICADVM201_27/tools/bin/checkSysConf ICADVM20.1
+checkSysConf --noDSIPLAY ICADVM20.1
 
 echo "ICADVM20.1 "
 $CDSDIR/PEGASUS221/tools/bin/checkSysConf PEGASUS22.1 
