@@ -13,6 +13,9 @@ sudo yum -y install redhat-lsb
 sudo yum -y install libXScrnSaver.x86_64
 sudo yum -y install xorg-x11-server-Xvfb
 sudo yum -y install openssl-devel.x86_64
+sudo yum -y install libXScrnSaver
+sudo yum -y install apr
+sudo yum -y install apr-util
 
 #Pegasus22.1
 sudo yum -y install xterm
