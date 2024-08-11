@@ -6,7 +6,7 @@ CDSDIR=/home/cadence/cadence/installs/
 
 
 echo "ICADVM20.1"
-checkSysConf --noDISPLAY ICADVM20.1
+$CDSDIR/ICADVM201/tools/bin/checkSysConf --noDISPLAY ICADVM20.1
 
 echo "ICADVM20.1 "
 $CDSDIR/PEGASUS221/tools/bin/checkSysConf PEGASUS22.1 
