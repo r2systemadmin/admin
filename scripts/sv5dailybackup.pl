@@ -24,10 +24,11 @@ sub calcElapsedTime;
 #
 ###################################################################
 
-my ($curdate,$tmp,$debug,$mounted,$hostname,$device,$diskonly,@callret,$time,$retvalue,$command,@message,$sourcedir,$destdir,$weekly,$startTime,$endTime,$elapsedTime,$LOG,$logfile,$saturday);
+my ($curdate,$tmp,$debug,$mounted,$hostname,$device,$diskonly,@callret,$time,$retvalue,$command,@message,$sourcedir,$destdir,$weekly,$startTime,$endTime,$elapsedTime,$LOG,$logfile,$saturday,$sync_tgt);
 
 $weekly = '';
 $diskonly = '';
+$sync_tgt = "sv7:/export/sv5sync";
 
 # Set to 0 for normal operation
 $debug = 0;
@@ -59,7 +60,7 @@ print FH "\nBackup started on $curdate.\n";
   $time = gettime();
   $startTime = time();
   print FH  "\nBackup of sv5:/export/home1 started at $time.\n";
-  $command = "rsync -a --delete --exclude='*.trn' /export/home1 store:/bk2/sv5";
+  $command = "rsync -a --delete --exclude='*.trn' /export/home1 $sync_tgt";
   print $command;
   if(Utils::execSys($command,\@message)) {
     print FH  "rsync of sv5:/export/home1 returned non zero.\n";
@@ -72,7 +73,7 @@ print FH "\nBackup started on $curdate.\n";
   $time = gettime();
   $startTime = time();
   print FH  "\n\nBackup of sv5:/export/home2 started at $time.\n";
-  $command = "rsync -a --delete --exclude=cache /export/home2 store:/bk2/sv5";
+  $command = "rsync -a --delete --exclude=cache /export/home2 $sync_tgt";
   print $command;
   if(Utils::execSys($command,\@message)) {
     print FH  "rsync of sv5:/export/home2 returned non zero.\n";
@@ -100,7 +101,7 @@ print FH "\nBackup started on $curdate.\n";
   $time = gettime(); 
   $startTime = time();  
   print FH  "\n\nBackup of sv5:/export/home4 started at $time.\n";
-  $command = "rsync -a --delete --exclude='*.trn' /export/home4 store:/bk2/sv5";
+  $command = "rsync -a --delete --exclude='*.trn' /export/home4 $sync_tgt";
   print $command;
   if(Utils::execSys($command,\@message)) {
     print FH  "rsync of sv5:/export/home4 returned non zero.\n";

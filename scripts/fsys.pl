@@ -75,12 +75,10 @@ diskusage("sv1", "/export/home","");
 $summary = $summary . "\nsv5\n";
 diskusage("sv5", "/export/home1", "Home directories.");
 diskusage("sv5", "/export/home2", "Clio Repositories.");
-diskusage("sv5", "/export/home3", "");
 diskusage("sv5", "/export/home4", "Tools");
 diskusage("sv5", "/export/libs", "Spare");
 diskusage("sv5", "/export/libs1", "Spare");
 $summary = $summary . "\nmx1\n"; 
-diskusage("mx1", "/export/npd", "Old Delorean moved \r"); 
 diskusage("mx1", "/export/mx1home", "Home directories \r "); 
 diskusage("mx1", "/export/projects", "Projects "); 
 
